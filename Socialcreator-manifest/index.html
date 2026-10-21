@@ -1,0 +1,12 @@
+<!doctype html>
+<html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex"><meta http-equiv="refresh" content="3;url=https://ventsharm.github.io/budget-planner/"><link rel="canonical" href="https://ventsharm.github.io/budget-planner/"><title>Budget Planner — We've moved</title><style>body{margin:0;min-height:100svh;display:grid;place-items:center;background:#f4efff;color:#352a50;font:16px/1.6 system-ui,sans-serif}main{margin:24px;padding:32px;max-width:390px;border-radius:28px;background:white;text-align:center}a{color:#6745d0}</style></head><body><main><h1>Budget Planner has moved</h1><p>Taking you to our new page…</p><a href="https://ventsharm.github.io/budget-planner/">Continue to Budget Planner</a></main><script>
+// Remove only the retired Budget Planner worker and its own offline caches.
+const destination=new URL('https://ventsharm.github.io/budget-planner/');
+destination.search=location.search;destination.hash=location.hash;
+const move=()=>location.replace(destination.href);
+const cleanup=(async()=>{
+ if('serviceWorker'in navigator){const scope=new URL('./',location.href).href;for(const registration of await navigator.serviceWorker.getRegistrations())if(registration.scope===scope)await registration.unregister();}
+ if('caches'in window)for(const name of await caches.keys())if(name.startsWith('socialcreator-budget-cache-'))await caches.delete(name);
+})();
+cleanup.then(move,move);setTimeout(move,2000);
+</script></body></html>
