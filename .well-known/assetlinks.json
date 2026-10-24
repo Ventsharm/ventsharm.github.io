@@ -22,5 +22,17 @@
         "5B:DF:C7:86:B1:F4:28:3F:5A:FD:AA:C5:E7:67:6B:F3:0C:EC:FA:67:F4:D8:F1:21:8C:92:F2:18:DC:44:8B:16"
       ]
     }
+  },
+  {
+    "relation": [
+      "delegate_permission/common.get_login_creds"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "io.github.ventsharm.donate",
+      "sha256_cert_fingerprints": [
+        "5B:DF:C7:86:B1:F4:28:3F:5A:FD:AA:C5:E7:67:6B:F3:0C:EC:FA:67:F4:D8:F1:21:8C:92:F2:18:DC:44:8B:16"
+      ]
+    }
   }
 ]
